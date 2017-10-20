@@ -1,0 +1,23 @@
+
+
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Recipes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let reciple of recipes">
+      <ion-icon name="restaurant" item-start></ion-icon>
+      {{reciple.title}}
+    </ion-item>
+  </ion-list>
+
+  <ion-fab bottom right edge>
+    <button ion-fab><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-menu [content]="mycontent">
+
+  <ion-content>
+    <ion-list>
+      <button ion-item menuClose (click)="openPage(homePage)">
+        Home
+      </button>
+      <button ion-item menuClose (click)="openPage(recipesPage)">
+        Recipes
+      </button>
+      <button ion-item menuClose (click)="openPage(aboutPage)">
+        About
+      </button>
+      <button ion-item menuClose (click)="openPage(contactPage)">
+        Contact
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Recipe Builder
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
